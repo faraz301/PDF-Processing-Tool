@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>PDF Processing Result</title>
+</head>
+<body>
+    <h1>PDF Processing Result</h1>
+    <table border="1">
+        <tr>
+            <th>Page Number</th>
+            <th>Text</th>
+        </tr>
+        {% for row in csv_data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Summary</h2>
+    <p id="summary">{{ summary }}</p>
+</body>
+</html>
